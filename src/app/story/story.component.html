@@ -1,0 +1,59 @@
+<div class="container-xl story" *ngIf="storyService.stories">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <h4 class="story__title">История</h4>
+      <div class="story__segment" *ngFor="let story of storyService.stories">
+        <div class="story__route">
+          <div class="story__point">
+            <div class="story__date">
+              {{ story.dateFrom }}
+            </div>
+            <div class="story__city">
+              {{ story.sourcePort }}
+            </div>
+            <div class="story__tt-title">Транспортная компания:</div>
+            <div class="story__tt-name">
+              {{ story.sender }}
+            </div>
+          </div>
+          <div class="story__point">
+            <div class="story__date">
+              {{ story.dateTo }}
+            </div>
+            <div class="story__city">
+              {{ story.destinationPort }}
+            </div>
+            <div class="story__tt-title">Транспортная компания:</div>
+            <div class="story__tt-name">
+              {{ story.recipient }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--      <table class="table">-->
+<!--        <thead>-->
+<!--          <tr>-->
+<!--            <th scope="col">sender</th>-->
+<!--            <th scope="col">dateFrom</th>-->
+<!--            <th scope="col">dateTo</th>-->
+<!--            <th scope="col">sourcePort</th>-->
+<!--            <th scope="col">destinationPort</th>-->
+<!--            <th scope="col">recipient</th>-->
+<!--          </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr *ngFor="let story of storyService.stories">-->
+<!--          <th>{{ story.sender }}</th>-->
+<!--          <td>{{ story.dateFrom }}</td>-->
+<!--          <td>{{ story.dateTo }}</td>-->
+<!--          <td>{{ story.sourcePort }}</td>-->
+<!--          <th>{{ story.destinationPort }}</th>-->
+<!--          <th>{{ story.recipient }}</th>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--      </table>-->
+    </div>
+  </div>
+</div>
+

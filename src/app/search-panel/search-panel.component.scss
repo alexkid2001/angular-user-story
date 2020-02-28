@@ -1,0 +1,37 @@
+.search-panel {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+
+    & > * {
+      flex-basis: auto;
+      &:nth-child(n+2) {
+        margin-left: 30px;
+      }
+    }
+
+    .form-group:first-child {
+      flex-basis: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__form {
+      display: flex;
+
+      & > * {
+
+        &:nth-child(n+2) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

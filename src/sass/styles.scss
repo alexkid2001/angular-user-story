@@ -1,0 +1,11 @@
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import 'functions', 'variables', 'mixins', 'forms', 'input-group', 'buttons', 'grid', 'jumbotron', 'type';
+
+@import "bootstrap";
+
+.search-panel {
+
+  &__form {
+    margin-top: 40px;
+  }
+}

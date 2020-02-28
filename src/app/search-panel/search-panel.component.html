@@ -1,0 +1,35 @@
+<div class="search-panel">
+  <div class="container-xl">
+    <h4 class="search-panel__title">Для поиска истории контейнера введите его номер</h4>
+    <div class="row justify-content-md-center">
+      <div class="col-lg-6 col-md-8">
+        <form class="search-panel__form" (ngSubmit)="getInfo($event)">
+<!--          <div class="form-row align-items-center">-->
+<!--            <div class="col-auto">-->
+              <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only">Password</label>
+                <input type="text"
+                       class="form-control"
+                       [class.is-invalid]="errorControlNumber || errorNumber"
+                       id="inputPassword2"
+                       placeholder="XXXX1234567"
+                       [(ngModel)]="number"
+                       (input)="checkNumber($event)"
+                       name="number"
+                >
+                <div class="invalid-feedback" *ngIf="errorNumber"> Не корректный номер контейнера</div>
+                <div class="invalid-feedback" *ngIf="errorControlNumber"> Не правильное контрольное число</div>
+              </div>
+<!--            </div>-->
+<!--            <div class="col-auto">-->
+              <button type="submit" class="btn btn-primary">Поиск</button>
+<!--            </div>-->
+<!--            <div class="col-auto">-->
+              <button type="text" class="btn btn-danger" (click)="resetClick($event)">Очистить</button>
+<!--            </div>-->
+<!--          </div>-->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
