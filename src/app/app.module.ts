@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {StoryService} from './story.service';
+import { StoryService } from './story.service';
 import { StoryComponent } from './story/story.component';
 import { SearchPanelComponent } from './search-panel/search-panel.component';
 
